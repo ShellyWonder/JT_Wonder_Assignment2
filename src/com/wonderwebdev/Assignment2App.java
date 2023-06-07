@@ -8,13 +8,16 @@ public class Assignment2App {
 		//generate random number 1-100--target number
 		Random random = new Random();
 		int targetNumber = random.nextInt(101);
-		//prompt user
+		
 		Scanner scanner = new Scanner(System.in);
 		int guesses = 0;
-		//start the guessing loop: while loop
-		while(guesses <= 5) {
+		//start the guessing loop
+		while(guesses < 5) {
 		// get the user's guess
+			
+			if (guesses == 0) { 
 			System.out.println("Please pick a number between 1 and 100.");
+			}
 			int guess = scanner.nextInt();
 		// validate guess
 			if(guess< 1 || guess> 100) {
@@ -41,5 +44,5 @@ public class Assignment2App {
 
 	}
 		scanner.close();
-}
+  }
 }
